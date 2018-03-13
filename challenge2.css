@@ -1,0 +1,26 @@
+#txt {
+    font-size: 80px;
+    text-align: center;
+    color: black;
+    padding-top: 50%;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: auto;
+    background-attachment: fixed;
+}
+
+/*tablet breakpoint*/
+
+@media only screen and (min-width: 600px) {
+
+
+}
+
+/*Desktop breakpoint*/
+@media only screen and (min-width: 1200px) {
+    
+
+}
