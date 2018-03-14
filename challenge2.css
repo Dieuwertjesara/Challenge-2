@@ -8,8 +8,8 @@ body {
     font-size: 90px;
     text-align: center;
     color: black;
-    color: red;
-    position: fixed;
+    color: ;
+    position: absolute;
     bottom: 0;
 }
 
