@@ -1,11 +1,13 @@
 /*  */
-@media only screen and (min-width: 50px) {
+
 
 #txt {
-    font-size: 80px;
+    width: 100%;
+    font-size: 90px;
     text-align: center;
     color: black;
-    padding-top: 50%;
+    position: fixed;
+    bottom: 0;
 }
 
 body {
@@ -15,6 +17,15 @@ body {
     background-attachment: fixed;
 }
 
+@media only screen and (orientation : landscape)  {
+  body {
+    background-size:auto;
+}
+  #txt {
+
+
+}
+}
 /*tablet breakpoint*/
 
 @media only screen and (min-width: 600px) {
