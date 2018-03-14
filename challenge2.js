@@ -1,6 +1,7 @@
 function getStylesheet() {
   var now = new Date();
   var hours = now.getHours();
+  var body = document.getElementsByTagName('body')[0];
   //ochtend 6-10
       if (hours >= 6 && hours < 10) {
        document.write("<link rel='stylesheet' href='morning.css' type='text/css'>");
@@ -11,8 +12,9 @@ function getStylesheet() {
       }
   //middag 12-17
       else if (hours >= 12 && hours < 17) {
-       document.write("<link rel='stylesheet' href='day.css' type='text/css'>");
+      document.write("<link rel='stylesheet' href='day.css' type='text/css'>");
       }
+
   //namiddag 17-20
       else if (hours >= 17 && hours < 20) {
        document.write("<link rel='stylesheet' href='evening.css' type='text/css'>");
@@ -30,9 +32,34 @@ function getStylesheet() {
        }
 }
 
+window.setInterval("checkForRefresh()", 60000);
+
+function checkForRefresh() {
+   var now = new Date();
+   if (now.getHours() == 10 && now.getMinutes() == 0) {
+      window.location.reload(false);
+   }
+   if (now.getHours() == 12 && now.getMinutes() == 0) {
+      window.location.reload(false);
+   }
+   if (now.getHours() == 17 && now.getMinutes() == 0) {
+      window.location.reload(false);
+   }
+   if (now.getHours() == 20 && now.getMinutes() == 0) {
+      window.location.reload(false);
+   }
+   if (now.getHours() == 6 && now.getMinutes() == 0) {
+      window.location.reload(false);
+   }
+   if (now.getHours() == 14 && now.getMinutes() == 36) {
+      window.location.reload(false);
+      document.alert
+   }
+}
+
 getStylesheet();
 
-
+//klok
 function startTime() {
     var today = new Date();
     var h = today.getHours();
@@ -47,4 +74,8 @@ function startTime() {
 function checkTime(i) {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
     return i;
+}
+
+function myFunction() {
+    document.write("<link rel='stylesheet' href='morning.css' type='text/css'>");
 }

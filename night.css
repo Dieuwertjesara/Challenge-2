@@ -1,4 +1,6 @@
 body {
-    background-image: url(img/backgroundnight.png);
+    background-image: url(img/night.png);
 }
-
+#txt {
+  color: black;
+}
