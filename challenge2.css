@@ -1,5 +1,7 @@
 /*  */
-
+body {
+  position: fixed;
+}
 
 #txt {
     width: 100%;
