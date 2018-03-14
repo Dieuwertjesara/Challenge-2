@@ -1,6 +1,6 @@
 /*  */
 body {
-  position: fixed;
+  position: absolute;
 }
 
 #txt {
@@ -9,7 +9,7 @@ body {
     text-align: center;
     color: black;
     color: ;
-    position: absolute;
+    position: fixed;
     bottom: 0;
 }
 
