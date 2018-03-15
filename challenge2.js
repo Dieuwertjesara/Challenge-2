@@ -1,35 +1,36 @@
-function getStylesheet() {
-  var now = new Date();
-  var hours = now.getHours();
-  var body = document.getElementsByTagName('body')[0];
-  //ochtend 6-10
-      if (hours >= 6 && hours < 10) {
-       document.write("<link rel='stylesheet' href='morning.css' type='text/css'>");
-      }
-  //overdag 10-12
-      else if (hours >= 10 && hours < 12) {
-       document.write("<link rel='stylesheet' href='morning.css' type='text/css'>");
-      }
-  //middag 12-17
-      else if (hours >= 12 && hours < 17) {
-      document.write("<link rel='stylesheet' href='day.css' type='text/css'>");
-      }
 
-  //namiddag 17-20
-      else if (hours >= 17 && hours < 20) {
-       document.write("<link rel='stylesheet' href='evening.css' type='text/css'>");
-      }
-  //avond 20-24
-      else if (hours >= 20 && hours < 24) {
-       document.write("<link rel='stylesheet' href='night.css' type='text/css'>");
-      }
-  //avond 24-6
-      else if (hours >= 24 && hours < 6) {
-        document.write("<link rel='stylesheet' href='night.css' type='text/css'>");
-          }
-      else {
-        document.write("<link rel='stylesheet' href='challenge2.css' type='text/css'>");
-       }
+
+function myFunction() {
+    var hour = new Date().getHours()
+//morning
+    if (hour >= 6 && hour < 12 ) {
+        document.getElementById("demo").innerHTML = "Morning";
+        document.getElementById("txt").style.color = "yellow";
+    }
+//day
+    else if (hour >= 12 && hour < 17 ) {
+    	document.getElementById("demo").innerHTML = "Day";
+      document.getElementById("txt").style.color = "blue";
+    }
+//evening
+    else if (hour >= 17 && hour < 22 ) {
+    	document.getElementById("demo").innerHTML = "Evening";
+      document.getElementById("txt").style.color = "orange";
+    }
+//night
+    else if (hour >= 22 && hour <= 24 ) {
+        document.getElementById("demo").innerHTML = "Night";
+        document.getElementById("txt").style.color = "white";
+    }
+    else if (hour >= 0 && hour < 6 ) {
+        document.getElementById("demo").innerHTML = "Night";
+        document.getElementById("txt").style.color = "white";
+    }
+//when I fck up
+    else {
+      document.getElementById("demo").innerHTML = "Gaat nie goed vriend";
+      document.getElementById("txt").style.color = "red";
+    }
 }
 
 window.setInterval("checkForRefresh()", 60000);
@@ -74,8 +75,4 @@ function startTime() {
 function checkTime(i) {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
     return i;
-}
-
-function myFunction() {
-    document.write("<link rel='stylesheet' href='morning.css' type='text/css'>");
 }

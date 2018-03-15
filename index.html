@@ -4,19 +4,19 @@
 		   <meta charset="UTF-8" />
 			 <meta name="viewport" content="width=device-width, initial-scale=1">
 			 <link type="text/css" href="challenge2.css" rel="stylesheet" />
-			 <link type="text/css" href="day.css" rel="stylesheet" />
-       <link type="text/css" href="night.css" rel="stylesheet" />
-			 <link type="text/css" href="evening.css" rel="stylesheet" />
-			 <link type="text/css" href="morning.css" rel="stylesheet" />
 			 <script type="text/javascript" src="challenge2.js"></script>
 	</head>
-  <body onload="startTime()">
-		<img id="background" src="img/evening.png">
-		<div id="sun">  <img id="mars" src="img/sun.png">
-		</div>
+  <body onload="startTime();myFunction()">
+
+			<img id="bergen" src="img/bergen.png">
+			<img id="sun" src="img/sun.png">
+			<img id="nightsky" src="img/nachtlucht.png">
+			<video autoplay muted loop id="stars">
+          <source src="img/stars.vid" type="video/mp4">
+      </video>
+		
 		<div id="txt"></div>
-
-
+		<p id="demo">test tekst</p>
 
   </body>
 </html>
