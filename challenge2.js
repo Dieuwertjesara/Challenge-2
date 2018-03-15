@@ -1,37 +1,25 @@
 
 
-function myFunction() {
-    var hour = new Date().getHours()
-//morning
-    if (hour >= 6 && hour < 12 ) {
-        document.getElementById("demo").innerHTML = "Morning";
-        document.getElementById("txt").style.color = "yellow";
-    }
-//day
-    else if (hour >= 12 && hour < 17 ) {
-    	document.getElementById("demo").innerHTML = "Day";
-      document.getElementById("txt").style.color = "blue";
-    }
-//evening
-    else if (hour >= 17 && hour < 22 ) {
-    	document.getElementById("demo").innerHTML = "Evening";
-      document.getElementById("txt").style.color = "orange";
-    }
-//night
-    else if (hour >= 22 && hour <= 24 ) {
-        document.getElementById("demo").innerHTML = "Night";
-        document.getElementById("txt").style.color = "white";
-    }
-    else if (hour >= 0 && hour < 6 ) {
-        document.getElementById("demo").innerHTML = "Night";
-        document.getElementById("txt").style.color = "white";
-    }
-//when I fck up
-    else {
-      document.getElementById("demo").innerHTML = "Gaat nie goed vriend";
-      document.getElementById("txt").style.color = "red";
-    }
+function getStylesheet() {
+      var currentTime = new Date().getHours();
+      if (0 <= currentTime&&currentTime < 6) {
+       document.write("<link rel='stylesheet' href='night.css' type='text/css'>");
+      }
+      if (6 <= currentTime&&currentTime < 9) {
+       document.write("<link rel='stylesheet' href='morning.css' type='text/css'>");
+      }
+      if (9 <= currentTime&&currentTime < 17) {
+       document.write("<link rel='stylesheet' href='day.css' type='text/css'>");
+      }
+      if (16 <= currentTime&&currentTime < 22) {
+       document.write("<link rel='stylesheet' href='evening.css' type='text/css'>");
+      }
+      if (22 <= currentTime&&currentTime <= 24) {
+       document.write("<link rel='stylesheet' href='night.css' type='text/css'>");
+      }
 }
+
+getStylesheet();
 
 window.setInterval("checkForRefresh()", 60000);
 
