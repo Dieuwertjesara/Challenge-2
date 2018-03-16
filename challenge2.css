@@ -38,7 +38,7 @@ body {
     background-position: right;
     background-size: cover;
     background-attachment: fixed;
-    background-color: pink;
+    background-color: red;
 }
 
 #sun {
@@ -69,53 +69,7 @@ body {
   z-index: 10;
 }
 
-@keyframes sun {
-  0%   {
-    width: 300%;
-    height: 200%;
-    bottom: -150%;
-    left: -80%;
-  }
-  1% {
-    width: 160%;
-    height: 160%;
-  }
-  100% {
-    width: 40%;
-    height: 40%;
-    bottom: 20%;
-    left: 40%;
-  }
-}
-  @keyframes nightsky  {
-  0%   {
-      top: 0%;
-      opacity: 1;
-    }
-  80% {
-      top: 0%;
-      opacity: 0;
-  }
-  100% {
-    top:0%;
-    opacity: 0;
-  }
-}
-@keyframes stars  {
-0%   {
-    top: 0%;
-    opacity: 1;
-  }
 
-  60% {
-    top: -20%;
-    opacity: 0;
-}
-100% {
-  top: 0%;
-  opacity: 0;
-}
-}
 
 @media only screen and (orientation : landscape)  {
   body {

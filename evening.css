@@ -20,7 +20,7 @@ html {
     animation-iteration-count: infinite;
     position: fixed;
     animation-timing-function: linear;
-    display: none;
+    opacity: 0;
 }
 #txt {
     width: 100%;
@@ -35,9 +35,9 @@ html {
 body {
     background-repeat: no-repeat;
     background-position: right;
-    background-size: cover;
     background-attachment: fixed;
     background-color: pink;
+    z-index: -1;
 }
 
 #sun {
@@ -57,7 +57,6 @@ body {
   animation-duration: 50s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in;
-
 }
 
 #mars {
@@ -76,10 +75,11 @@ body {
     bottom: 85%;
     left: 80%;
   }
-  95% {
+90% {
+    width: 160%;
+    height: 160%;
 
-  }
-  }
+}
   100% {
     width: 300%;
     height: 200%;
@@ -87,18 +87,19 @@ body {
     left: -80%;
   }
 }
+
   @keyframes nightsky  {
-  0%   {
-      top: 0%;
-      opacity: 0.1;
-    }
-  80% {
-      top: 0%;
-      opacity: 0;
-  }
-  100% {
-    top:0%;
-    opacity: 0.8;
-  }
+0% {
+  top: 0%;
+  opacity: 0;
 }
+
+  50%{
+    top: 0%;
+    opacity: 0.9;
+  }
+
+100% {
+  top: 0%;
+  opacity: 1;
 }

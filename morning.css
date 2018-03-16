@@ -89,11 +89,11 @@ body {
   @keyframes nightsky  {
   0%   {
       top: 0%;
-      opacity: 1;
-    }
-  80% {
-      top: 0%;
       opacity: 0;
+    }
+  10% {
+      top: 0%;
+      opacity: 0.8;
   }
   100% {
     top:0%;
@@ -107,7 +107,7 @@ body {
   }
 
   60% {
-    top: -20%;
+    top: -10%;
     opacity: 0;
 }
 100% {
