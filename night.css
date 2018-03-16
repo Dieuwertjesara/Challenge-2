@@ -27,7 +27,7 @@ html {
     color: red;
     position: fixed;
     bottom: 0%;
-    z-index: 10;
+    z-index: 100;
 }
 
 body {
@@ -66,6 +66,18 @@ body {
   left: 0;
   right: 0;
   z-index: 10;
+}
+#backgroundcolor {
+  z-index: 2;
+  width: 100%;
+  left: 0;
+  top:0%;
+  position: fixed;
+  animation-name: backgroundcolor;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  display: none;
 }
 
 @keyframes nightsky  {

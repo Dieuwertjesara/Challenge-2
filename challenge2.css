@@ -1,4 +1,3 @@
-/*  */
 html {
   position: fixed;
 }
@@ -11,13 +10,12 @@ html {
 #stars{
     position: fixed;
     left: 0;
-    top: -10%;
+    top: 0%;
     width: auto;
     height: auto;
-    z-index: 1;
-    opacity: 1;
+    z-index: 6;
     animation-name: stars;
-    animation-duration: 50s;
+    animation-duration: 240s;
     animation-iteration-count: infinite;
     position: fixed;
     animation-timing-function: linear;
@@ -26,10 +24,10 @@ html {
     width: 100%;
     font-size: 90px;
     text-align: center;
-    color: black;
+    color: white;
     position: fixed;
     bottom: 0%;
-    z-index: 10;
+    z-index: 100;
 }
 
 body {
@@ -38,24 +36,25 @@ body {
     background-position: right;
     background-size: cover;
     background-attachment: fixed;
-    background-color: red;
+    background-color: salmon;
 }
 
 #sun {
     animation-name: sun;
-    animation-duration: 50s;
+    animation-duration: 240s;
     animation-iteration-count: infinite;
     position: fixed;
     animation-timing-function: ease-out;
-    z-index: 1;
+    z-index: 6;
 }
 #nightsky {
-  z-index: 10;
+  z-index: 5;
   width: 100%;
   left: 0;
+  top: 0%;
   position: fixed;
   animation-name: nightsky;
-  animation-duration: 50s;
+  animation-duration: 240s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in;
 }
@@ -67,6 +66,185 @@ body {
   left: 0;
   right: 0;
   z-index: 10;
+}
+
+#backgroundcolor {
+  z-index: 0;
+  width: 100%;
+  left: 0;
+  top: 0%;
+  position: fixed;
+  animation-name: backgroundcolor;
+  animation-duration: 240s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+}
+
+@keyframes sun {
+
+  0%  {
+    width: 300%;
+    height: 200%;
+    bottom: -150%;
+    left: -80%;
+    opacity: 1;
+  }
+  1% {
+    width: 160%;
+    height: 160%;
+    opacity: 1;
+  }
+
+  30% {
+    width: 30%;
+    height: 30%;
+    bottom: 75%;
+    left: 70%;
+}
+  40% {
+    width: 30%;
+    height: 30%;
+    bottom: 75%;
+    left: 70%;
+}
+  50% {
+    width: 30%;
+    height: 30%;
+    bottom: 75%;
+    left: 70%;
+}
+
+  60%;  {
+    width: 30%;
+    height: 30%;
+    bottom: 75%;
+    left: 70%;
+  }
+
+  75%;  {
+    width: 30%;
+    height: 30%;
+    bottom: 80%;
+    left: 70%;
+  }
+
+  99% {
+    width: 160%;
+    height: 160%;
+  }
+
+  100% {
+    width: 250%;
+    height: 150%;
+    bottom: -150%;
+    left: -80%;
+  }
+}
+  @keyframes nightsky  {
+
+  0%  {
+    top: 0%;
+    opacity: 0;
+    }
+  1% {
+    top: 0%;
+    opacity: 0.8;
+  }
+  25% {
+    top:0%;
+    opacity: 0;
+}
+  50%;  {
+    top:0%;
+    opacity: 0.8;
+    }
+
+    75% {
+      top: 0%;
+      opacity: 1;
+      }
+
+    100%;{
+      top: 0%;
+      opacity: 1;
+    }
+  }
+@keyframes stars  {
+
+  0%   {
+      top: 0%;
+      opacity: 1;
+    }
+
+  5% {
+      top: 0%;
+      opacity: 0;
+  }
+  25% {
+    top: 0%;
+    opacity: 0;
+  }
+
+  50%;  {
+    top: 0%;
+    opacity: 0;
+  }
+
+  75% {
+    top: 0%;
+    opacity:0;
+  }
+
+  80% {
+    top: 0%;
+    opacity: 1;
+  }
+
+  100%;{
+    top: 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes backgroundcolor {
+
+  0% {
+    opacity: 0;
+    top: 0%;
+  }
+  10% {
+    opacity: 0.5;
+    top:0%;
+  }
+  20% {
+    top: 0%;
+    opacity: 1;
+  }
+  25% {
+    top: 0%;
+    opacity: 1;
+  }
+
+  50%;  {
+    top: 0%;
+    opacity: 1;
+  }
+60%;  {
+    top: 0%;
+    opacity: 1;
+  }
+  75% {
+      opacity: 0;
+      top: 0%;
+    }
+  80% {
+      top: 0%;
+      opacity: 0;
+    }
+  100% {
+      top: 0%;
+      opacity: 0;
+    }
 }
 
 
