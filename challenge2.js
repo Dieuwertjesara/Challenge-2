@@ -1,8 +1,7 @@
 
 
 function getStylesheet() {
-      var currentTime = 6
-       //new Date().getHours();
+      var currentTime =  new Date().getHours();
       if (0 <= currentTime&&currentTime < 6) {
        document.write("<link rel='stylesheet' href='night.css' type='text/css'>");
       }
