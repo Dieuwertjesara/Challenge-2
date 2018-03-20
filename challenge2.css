@@ -13,12 +13,8 @@ html {
     top: 0%;
     width: auto;
     height: auto;
-    z-index: 6;
-    animation-name: stars;
-    animation-duration: 240s;
-    animation-iteration-count: infinite;
-    position: fixed;
-    animation-timing-function: linear;
+    z-index: 9;
+    opacity: 0;
 }
 #txt {
     width: 100%;
@@ -30,33 +26,71 @@ html {
     z-index: 100;
 }
 
+
+#cloud1 {
+      position: fixed;
+      z-index: 11;
+      top: 10vh;
+      left: -100%;
+      width: 100vw;
+      height: 50vw;
+}
+#cloud2 {
+      position: fixed;
+      z-index: 11;
+      top: 0vh;
+      left: -100%;
+      width: 100vw;
+      height: 50vw;
+  }
+
+  #cloud3 {
+        position: fixed;
+        z-index: 6;
+        top: 10vh;
+        left: -100%;
+        width: 100vw;
+        height: 50vw;
+        transform: perspective();
+  }
+  #cloud4 {
+        position: fixed;
+        z-index: 6;
+        top: 0vh;
+        left: -100%;
+        width: 100vw;
+        height: 50vw;
+    }
+
+
 body {
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: right;
     background-size: cover;
     background-attachment: fixed;
-    background-color: salmon;
-}
+    background-color: #f46842;
+  }
 
 #sun {
-    animation-name: sun;
-    animation-duration: 240s;
-    animation-iteration-count: infinite;
     position: fixed;
-    animation-timing-function: ease-out;
-    z-index: 6;
-}
+    z-index: 10;
+    bottom: 0vh;
+    left: 0vw;
+    width: 30vw;
+    height: 30vw;
+  }
+
+
+/*vm en vh is hoeveel van het scherm*/
+
 #nightsky {
   z-index: 5;
   width: 100%;
   left: 0;
   top: 0%;
+  opacity: 0;
   position: fixed;
-  animation-name: nightsky;
-  animation-duration: 240s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in;
 }
 
 #mars {
@@ -65,19 +99,16 @@ body {
   position: fixed;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 11;
 }
 
 #backgroundcolor {
-  z-index: 0;
+  z-index: 5;
   width: 100%;
   left: 0;
   top: 0%;
   position: fixed;
-  animation-name: backgroundcolor;
-  animation-duration: 240s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in;
+  opacity: 0;
 }
 
 @keyframes sun {
@@ -213,16 +244,16 @@ body {
     top: 0%;
   }
   10% {
-    opacity: 0.5;
+    opacity: 0.1;
     top:0%;
   }
   20% {
     top: 0%;
-    opacity: 1;
+    opacity: 0.4;
   }
   25% {
     top: 0%;
-    opacity: 1;
+    opacity: 0.5;
   }
 
   50%;  {
