@@ -2,7 +2,7 @@
 myAnimation();
 
 function myAnimation() {
-      var currentTime =  new Date().getHours();
+      var currentTime = new Date().getHours();
       var tl = new TimelineMax();
       var sun = document.getElementById('sun');
       var clouds = document.getElementsByClassName('clouds');
@@ -217,4 +217,71 @@ function startTime() {
 function checkTime(i) {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
     return i;
+}
+//refresh
+refreshAt(6,0,0);
+refreshAt(6,30,0);
+refreshAt(7,0,0);
+refreshAt(7,30,0);
+refreshAt(8,0,0);
+refreshAt(8,30,0);
+refreshAt(9,0,0);
+refreshAt(9,30,0);
+refreshAt(10,0,0);
+refreshAt(10,30,0);
+refreshAt(11,0,0);
+refreshAt(11,30,0);
+refreshAt(12,0,0);
+refreshAt(12,30,0);
+refreshAt(13,0,0);
+refreshAt(13,30,0);
+refreshAt(14,0,0);
+refreshAt(14,30,0);
+refreshAt(15,0,0);
+refreshAt(15,30,0);
+refreshAt(16,0,0);
+refreshAt(16,30,0);
+refreshAt(17,0,0);
+refreshAt(17,30,0);
+refreshAt(18,0,0);
+refreshAt(18,30,0);
+refreshAt(19,0,0);
+refreshAt(19,30,0);
+refreshAt(20,0,0);
+refreshAt(20,30,0);
+refreshAt(21,0,0);
+refreshAt(21,30,0);
+refreshAt(22,0,0);
+refreshAt(22,30,0);
+refreshAt(23,0,0);
+refreshAt(23,30,0);
+refreshAt(24,0,0);
+refreshAt(0,0,0);
+refreshAt(0,30,0);
+refreshAt(1,0,0);
+refreshAt(1,30,0);
+refreshAt(2,0,0);
+refreshAt(2,30,0);
+refreshAt(3,0,0);
+refreshAt(3,30,0);
+refreshAt(4,0,0);
+refreshAt(4,30,0);
+refreshAt(5,0,0);
+refreshAt(5,30,0);
+
+function refreshAt(hours, minutes, seconds) {
+    var now = new Date();
+    var then = new Date();
+
+    if(now.getHours() > hours ||
+       (now.getHours() == hours && now.getMinutes() > minutes) ||
+        now.getHours() == hours && now.getMinutes() == minutes && now.getSeconds() >= seconds) {
+        then.setDate(now.getDate() + 1);
+    }
+    then.setHours(hours);
+    then.setMinutes(minutes);
+    then.setSeconds(seconds);
+
+    var timeout = (then.getTime() - now.getTime());
+    setTimeout(function() { window.location.reload(true); }, timeout);
 }
