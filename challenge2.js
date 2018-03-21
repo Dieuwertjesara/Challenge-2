@@ -1,53 +1,206 @@
 
+myAnimation();
 
-function getStylesheet() {
-      var currentTime = new Date().getHours();
-      if (1 <= currentTime&&currentTime < 6) {
-       document.write("<link rel='stylesheet' href='night.css' type='text/css'>");
+function myAnimation() {
+      var currentTime =  new Date().getHours();
+      var tl = new TimelineMax();
+      var sun = document.getElementById('sun');
+      var clouds = document.getElementsByClassName('clouds');
+      //var currentDuration = myAnimation.duration(5);
+      if (currentTime >= 0 &&currentTime < 6) {
+        tl.to(stars, 10,{opacity:1,},3);
+        tl.to(nightsky, 0,
+                {
+                opacity:1,
+                }
+                ,0);
+}
+      if (currentTime >= 6 &&currentTime < 10) {
+      tl.fromTo(sun, 10,
+        {
+        marginLeft: '-35vw',
+        marginBottom: '-35vw',
+        width: '80vw',
+        height:'80vw',
+        },
+        {
+        marginLeft:'75vw',
+        marginBottom:'100vw',
+        width:'30vw',
+        height:'30vw',}
+        ,1);
+
+        tl.fromTo(stars, 2,
+          {
+          opacity:1,
+          },
+          {
+          opacity:0,}
+          ,1);
+
+        tl.fromTo(nightsky, 5,
+        {
+        opacity:1,
+        },
+        {
+        opacity:0,}
+        ,2);
+
+        tl.fromTo(backgroundcolor, 10,
+          {
+          opacity:0,
+          },
+          {
+          opacity:1,}
+          ,3);
+
+          tl.to(clouds, 0,{opacity:0},0);
+
+}
+      if (currentTime >= 10 &&currentTime < 16) {
+      tl.fromTo(sun, 2,
+        {
+          marginLeft:'75vw',
+          marginBottom:'100vw',
+          width:'30vw',
+          height:'30vw',
+        },
+        {
+        marginLeft:'73vw',
+        marginBottom:'99vw',
+        width:'33vw',
+        height:'33vw',
+        yoyo:true,
+        repeat:-1,}
+        ,1);
+
+        tl.to(backgroundcolor, 0,
+          {
+          opacity:1,
+          }
+          ,0);
+
+      tl.to(cloud1, 9,
+        {
+        marginLeft: '200vw',
+        repeat:-1,
+        ease: Power0.easeNone,
+        }
+        ,1);
+      tl.to(cloud2, 10,
+          {
+          marginLeft: '200vw',
+          repeat:-1,
+          ease: Power0.easeNone,
+          }
+          ,4);
+
+      tl.to(cloud3, 9,
+            {
+            marginLeft: '200vw',
+            repeat:-1,
+            ease: Power0.easeNone,
+            }
+            ,7);
+
+      tl.to(cloud4, 10,
+              {
+              marginLeft: '200vw',
+              repeat:-1,
+              ease: Power0.easeNone,
+              }
+              ,10);
+
       }
-      if (6 <= currentTime&&currentTime < 12) {
-       document.write("<link rel='stylesheet' href='morning.css' type='text/css'>");
-      }
-      if (12 <= currentTime&&currentTime < 18) {
-       document.write("<link rel='stylesheet' href='day.css' type='text/css'>");
-      }
-      if (18 <= currentTime&&currentTime < 24) {
-       document.write("<link rel='stylesheet' href='evening.css' type='text/css'>");
-      }
-      if (24 <= currentTime&&currentTime <= 24) {
-       document.write("<link rel='stylesheet' href='night.css' type='text/css'>");
+      if (currentTime >= 16 &&currentTime < 22) {
+      tl.fromTo(sun, 10,
+          {
+          marginLeft:'75vw',
+          marginBottom:'100vw',
+          width:'30vw',
+          height:'30vw',
+          },
+          {
+          marginLeft: '-35vw',
+          marginBottom: '-35vw',
+          width: '80vw',
+          height:'80vw',}
+          ,1);
+
+      tl.to(cloud1, 9,
+        {
+        marginLeft: '200vw',
+        repeat:-1,
+        ease: Power0.easeNone,
+        }
+        ,-10);
+      tl.to(cloud2, 10,
+          {
+          marginLeft: '200vw',
+          repeat:-1,
+          ease: Power0.easeNone,
+          }
+          ,-14);
+
+      tl.to(cloud3, 9,
+            {
+            marginLeft: '200vw',
+            repeat:-1,
+            ease: Power0.easeNone,
+            }
+            ,-17);
+
+      tl.to(cloud4, 10,
+              {
+              marginLeft: '200vw',
+              repeat:-1,
+              ease: Power0.easeNone,
+              }
+              ,-20);
+      tl.fromTo(clouds, 4,
+              {
+              opacity:1,
+              },
+              {
+              opacity:0,
+              }
+            ,1);
+      tl.fromTo(backgroundcolor, 10,
+              {
+                opacity:1,
+              },
+              {
+                opacity:0,
+              }
+          ,1);
+      tl.fromTo(nightsky, 10,
+                  {
+                  opacity: 0,
+                  },
+                  {
+                  opacity: 1,
+                  }
+                  ,4);
+}
+      if (currentTime >= 22 &&currentTime < 24) {
+        tl.to(nightsky, 0,
+                {
+                opacity:1,
+                }
+                ,0);
+
+        tl.fromTo(stars, 20,
+                {
+                opacity:0,
+                },
+                {
+                opacity:1,
+                }
+                ,3);
       }
 
 }
 
-getStylesheet();
-
-window.setInterval("checkForRefresh()", 60000);
-
-function checkForRefresh() {
-   var now = new Date();
-   if (now.getHours() == 10 && now.getMinutes() == 0) {
-      window.location.reload(false);
-   }
-   if (now.getHours() == 12 && now.getMinutes() == 0) {
-      window.location.reload(false);
-   }
-   if (now.getHours() == 17 && now.getMinutes() == 0) {
-      window.location.reload(false);
-   }
-   if (now.getHours() == 20 && now.getMinutes() == 0) {
-      window.location.reload(false);
-   }
-   if (now.getHours() == 6 && now.getMinutes() == 0) {
-      window.location.reload(false);
-   }
-   if (now.getHours() == 14 && now.getMinutes() == 36) {
-      window.location.reload(false);
-      document.alert
-   }
-}
-
-getStylesheet();
 
 //klok
 function startTime() {
