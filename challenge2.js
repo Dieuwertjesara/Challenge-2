@@ -2,7 +2,7 @@
 myAnimation();
 
 function myAnimation() {
-      var currentTime = 6 //new Date().getHours();
+      var currentTime = new Date().getHours();
       var tl = new TimelineMax();
       var sun = document.getElementById('sun');
       var clouds = document.getElementsByClassName('clouds');
