@@ -4,12 +4,11 @@
 		   <meta charset="UTF-8" />
 			 <meta name="viewport" content="width=device-width, initial-scale=1">
 			 <link type="text/css" href="challenge2.css" rel="stylesheet" />
-
+			 <link href="https://fonts.googleapis.com/css?family=Audiowide|Caveat|Comfortaa|Farsan|Pacifico" rel="stylesheet">
 			 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
 
 	</head>
   <body onload="startTime()">
-
 			<img id="mars" src="img/mars.png">
 			<img id="sun" src="img/sun.png">
 			<img id="nightsky" src="img/nachtlucht.png">
@@ -21,12 +20,16 @@
 			<video autoplay muted loop id="stars">
           <source src="img/stars.vid" type="video/mp4">
       </video>
-			<div id="morning">
-				<p>p</p>
-			 </div>
-			<div id="txt"></div>
-			<p id="demo">test tekst</p>
-
+			<div id="clock"></div>
+			<div class="tekst">
+			<p id="wakeup"> Wake up sunshine <p>
+			<p id="breakfast"> Time for breakfast <p>
+			<p id="noon"> Lunch time </p>
+			<p id="afternoon"> Enjoy your day!</p>
+			<p id="dinner"> Dinner time </p>
+			<p id="evening"> Relax</br>get ready for bed </p>
+			<p id="night"> Time for bed</br>Goodnight</p>
+		</div>
 			<script type="text/javascript" src="challenge2.js"></script>
   </body>
 </html>

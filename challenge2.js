@@ -2,11 +2,48 @@
 myAnimation();
 
 function myAnimation() {
-      var currentTime = new Date().getHours();
+      var currentTime = 6 //new Date().getHours();
       var tl = new TimelineMax();
       var sun = document.getElementById('sun');
       var clouds = document.getElementsByClassName('clouds');
       //var currentDuration = myAnimation.duration(5);
+      if (currentTime >= 6 &&currentTime < 8) {
+        tl.to(wakeup, 0,{
+          opacity:1,
+        });
+      }
+      if (currentTime >= 8 &&currentTime < 10) {
+        tl.to(breakfast, 0,{
+          opacity:1,
+        });
+      }
+      if (currentTime >= 12 &&currentTime < 14) {
+        tl.to(noon, 0,{
+          opacity:1,
+        });
+      }
+      if (currentTime >= 14 &&currentTime < 18) {
+        tl.to(afternoon, 0,{
+          opacity:1,
+        });
+      }
+
+      if (currentTime >= 18 &&currentTime < 20) {
+        tl.to(dinner, 0,{
+          opacity:1,
+        });
+      }
+      if (currentTime >= 20 &&currentTime < 22) {
+        tl.to(evening, 0,{
+          opacity:1,
+        });
+      }
+      if (currentTime >= 22 &&currentTime < 24) {
+        tl.to(night, 0,{
+          opacity:1,
+        });
+      }
+
       if (currentTime >= 0 &&currentTime < 6) {
         tl.to(stars, 10,{opacity:1,},3);
         tl.to(nightsky, 0,
@@ -14,20 +51,26 @@ function myAnimation() {
                 opacity:1,
                 }
                 ,0);
+        tl.to(sun,0,{
+          opacity:0,
+        },0);
 }
+
       if (currentTime >= 6 &&currentTime < 10) {
       tl.fromTo(sun, 10,
         {
-        marginLeft: '-35vw',
-        marginBottom: '-35vw',
-        width: '80vw',
-        height:'80vw',
+        marginBottom:'-70vmin',
+        marginLeft:'-45vmin',
+        width: '90vmin',
+        height:'90vmin',
         },
         {
-        marginLeft:'75vw',
-        marginBottom:'100vw',
-        width:'30vw',
-        height:'30vw',}
+          top:0,
+          right: 0,
+          marginLeft:'75vw',
+          marginBottom:'100vw',
+          width:'30vmin',
+          height:'30vmin',}
         ,1);
 
         tl.fromTo(stars, 2,
@@ -60,16 +103,20 @@ function myAnimation() {
       if (currentTime >= 10 &&currentTime < 16) {
       tl.fromTo(sun, 2,
         {
+          top:0,
+          right: 0,
           marginLeft:'75vw',
           marginBottom:'100vw',
-          width:'30vw',
-          height:'30vw',
+          width:'30vmin',
+          height:'30vmin',
         },
         {
+        top:0,
+        right: 0,
         marginLeft:'73vw',
         marginBottom:'99vw',
-        width:'33vw',
-        height:'33vw',
+        width:'33vmin',
+        height:'33vmin',
         yoyo:true,
         repeat:-1,}
         ,1);
@@ -113,19 +160,21 @@ function myAnimation() {
 
       }
       if (currentTime >= 16 &&currentTime < 22) {
-      tl.fromTo(sun, 10,
-          {
-          marginLeft:'75vw',
-          marginBottom:'100vw',
-          width:'30vw',
-          height:'30vw',
-          },
-          {
-          marginLeft: '-35vw',
-          marginBottom: '-35vw',
-          width: '80vw',
-          height:'80vw',}
-          ,1);
+      tl.fromTo(sun, 10,{
+        top:0,
+        right: 0,
+        marginLeft:'75vw',
+        marginBottom:'100vw',
+        width:'30vmin',
+        height:'30vmin',
+        ease: Power1.easeOut,
+      },{
+          marginLeft:'-80vw',
+          marginTop:'100vh',
+          width: '90vmin',
+          height:'90vmin',
+          ease: Power1.easeIn,
+        });
 
       tl.to(cloud1, 9,
         {
@@ -133,7 +182,7 @@ function myAnimation() {
         repeat:-1,
         ease: Power0.easeNone,
         }
-        ,-10);
+        );
       tl.to(cloud2, 10,
           {
           marginLeft: '200vw',
@@ -142,7 +191,7 @@ function myAnimation() {
           }
           ,-14);
 
-      tl.to(cloud3, 9,
+      tl.to(cloud3, 30,
             {
             marginLeft: '200vw',
             repeat:-1,
@@ -210,7 +259,7 @@ function startTime() {
     var s = today.getSeconds();
     m = checkTime(m);
     s = checkTime(s);
-    document.getElementById('txt').innerHTML =
+    document.getElementById('clock').innerHTML =
     h + ":" + m + ":" + s;
     var t = setTimeout(startTime, 1000);
 }
