@@ -24,31 +24,47 @@ font-family: 'Audiowide', cursive;
   font-family: 'Caveat', cursive;
 }
 
-#wakeup {
+#morning {
   opacity: 0;
+  color: white;
+  text-align: center;
+  font-size: 10vmin;
+  position: fixed;
+  z-index: 100;
+  top: 15vmin;
+  font-family: 'Caveat', cursive;
 }
 
-#breakfast{
+#day {
   opacity: 0;
-}
-
-#noon {
-  opacity: 0;
-}
-
-#afternoon {
-  opacity: 0;
-}
-
-#dinner {
-  opacity: 0;
+  color: white;
+  text-align: center;
+  font-size: 10vmin;
+  position: fixed;
+  z-index: 100;
+  top: 15vmin;
+  font-family: 'Caveat', cursive;
 }
 #evening {
   opacity: 0;
+  color: white;
+  text-align: center;
+  font-size: 10vmin;
+  position: fixed;
+  z-index: 100;
+  top: 25vmin;
+  font-family: 'Caveat', cursive;
 }
 
 #night {
   opacity: 0;
+  color: white;
+  text-align: center;
+  font-size: 10vmin;
+  position: fixed;
+  z-index: 100;
+  top: 25vmin;
+  font-family: 'Caveat', cursive;
 }
 
 #stars{
@@ -122,6 +138,7 @@ body {
     left: 0vw;
     width: 30vw;
     height: 30vw;
+    opacity: 0;
   }
 
 
@@ -199,6 +216,19 @@ body {
   top: 30vmin;
   color: white;
 }
+#night {
+  top: 6vmin;
+}
+
+#evening {
+  top: 6vmin;
+}
+#morning {
+  top: 10vmin;
+}
+#day{
+  top: 10vmin;
+}
 }
 
 /*tablet breakpoint*/
@@ -208,8 +238,10 @@ body {
   top: 35vmin;
   color: white;
 }
-.tekst{
-  color: white;
+#night {
+  top: 10vmin;
+}
+#evening{
   top: 10vmin;
 }
 
@@ -223,8 +255,10 @@ body {
   text-align: center;
   color: white;
 }
-  .tekst{
-    color: white;
-    top: 5vmin;
-    }
+  #night {
+    top: 3vmin;
+  }
+  #evening {
+    top: 3vmin;
+  }
 }

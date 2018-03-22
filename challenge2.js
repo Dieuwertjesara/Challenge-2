@@ -7,42 +7,6 @@ function myAnimation() {
       var sun = document.getElementById('sun');
       var clouds = document.getElementsByClassName('clouds');
       //var currentDuration = myAnimation.duration(5);
-      if (currentTime >= 6 &&currentTime < 8) {
-        tl.to(wakeup, 0,{
-          opacity:1,
-        });
-      }
-      if (currentTime >= 8 &&currentTime < 10) {
-        tl.to(breakfast, 0,{
-          opacity:1,
-        });
-      }
-      if (currentTime >= 12 &&currentTime < 14) {
-        tl.to(noon, 0,{
-          opacity:1,
-        });
-      }
-      if (currentTime >= 14 &&currentTime < 18) {
-        tl.to(afternoon, 0,{
-          opacity:1,
-        });
-      }
-
-      if (currentTime >= 18 &&currentTime < 20) {
-        tl.to(dinner, 0,{
-          opacity:1,
-        });
-      }
-      if (currentTime >= 20 &&currentTime < 22) {
-        tl.to(evening, 0,{
-          opacity:1,
-        });
-      }
-      if (currentTime >= 22 &&currentTime < 24) {
-        tl.to(night, 0,{
-          opacity:1,
-        });
-      }
 
       if (currentTime >= 0 &&currentTime < 6) {
         tl.to(stars, 10,{opacity:1,},3);
@@ -51,14 +15,17 @@ function myAnimation() {
                 opacity:1,
                 }
                 ,0);
-        tl.to(sun,0,{
-          opacity:0,
-        },0);
-}
-
+              }
       if (currentTime >= 6 &&currentTime < 10) {
+      tl.to(morning, 0,
+                {
+                opacity:1,
+                }
+                ,0);
+
       tl.fromTo(sun, 10,
         {
+        opacity:1,
         marginBottom:'-70vmin',
         marginLeft:'-45vmin',
         width: '90vmin',
@@ -101,8 +68,14 @@ function myAnimation() {
 
 }
       if (currentTime >= 10 &&currentTime < 16) {
+        tl.to(day, 1,
+                {
+                opacity:1,
+                }
+                ,0);
       tl.fromTo(sun, 2,
         {
+          opacity:1,
           top:0,
           right: 0,
           marginLeft:'75vw',
@@ -160,7 +133,13 @@ function myAnimation() {
 
       }
       if (currentTime >= 16 &&currentTime < 22) {
+        tl.to(evening, 0,
+                {
+                opacity:1,
+                }
+                ,0);
       tl.fromTo(sun, 10,{
+        opacity:1,
         top:0,
         right: 0,
         marginLeft:'75vw',
@@ -232,6 +211,10 @@ function myAnimation() {
                   ,4);
 }
       if (currentTime >= 22 &&currentTime < 24) {
+        tl.to(night, 0,{
+          opacity:1,
+        });
+
         tl.to(nightsky, 0,
                 {
                 opacity:1,
